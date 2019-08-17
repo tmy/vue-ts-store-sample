@@ -1,5 +1,9 @@
 # vue-ts-store-sample
 
+TypeScript + Vue.observable + Functional API で状態管理を行うサンプルです。
+
+解説記事: https://qiita.com/tmy/items/a545e44100247c364a71
+
 ## Project setup
 ```
 npm install
