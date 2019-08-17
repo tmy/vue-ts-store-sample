@@ -5,6 +5,12 @@
     <SimpleCounter />
     <h2>ストアで状態管理</h2>
     <StoredCounter />
+    <h2>Dependency Injection でストアを共有</h2>
+    <CounterProvider>
+      <InjectedDecrementButton />
+      <InjectedCounterDisplay />
+      <InjectedIncrementButton />
+    </CounterProvider>
   </div>
 </template>
 
@@ -12,12 +18,20 @@
 import Vue from 'vue';
 import SimpleCounter from './components/SimpleCounter.vue';
 import StoredCounter from './components/StoredCounter.vue';
+import CounterProvider from './components/CounterProvider.vue';
+import InjectedCounterDisplay from './components/InjectedCounterDisplay.vue';
+import InjectedIncrementButton from './components/InjectedIncrementButton.vue';
+import InjectedDecrementButton from './components/InjectedDecrementButton.vue';
 
 export default Vue.extend({
   name: 'App',
   components: {
     SimpleCounter,
     StoredCounter,
+    CounterProvider,
+    InjectedCounterDisplay,
+    InjectedIncrementButton,
+    InjectedDecrementButton,
   },
 });
 </script>
