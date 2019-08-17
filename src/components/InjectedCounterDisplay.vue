@@ -7,14 +7,11 @@
 <script lang="ts">
 import { computed, inject } from 'vue-function-api';
 import CounterKey from './counter-key';
+import injectOrError from './inject-or-error';
 
 export default {
   setup() {
-    const wrapper = inject(CounterKey);
-    if (!wrapper) {
-      throw new Error(`${CounterKey} is not provided`);
-    }
-    const counter = wrapper.value;
+    const counter = injectOrError(CounterKey);
     const count = computed(() => counter.count);
 
     return {
