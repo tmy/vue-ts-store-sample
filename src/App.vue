@@ -11,6 +11,12 @@
       <InjectedCounterDisplay />
       <InjectedIncrementButton />
     </CounterProvider>
+    <h2>ストアをグローバルで共有</h2>
+    <div>
+      <GlobalDecrementButton />
+      <GlobalCounterDisplay />
+      <GlobalIncrementButton />
+    </div>
   </div>
 </template>
 
@@ -22,6 +28,9 @@ import CounterProvider from './components/CounterProvider.vue';
 import InjectedCounterDisplay from './components/InjectedCounterDisplay.vue';
 import InjectedIncrementButton from './components/InjectedIncrementButton.vue';
 import InjectedDecrementButton from './components/InjectedDecrementButton.vue';
+import GlobalCounterDisplay from './components/GlobalCounterDisplay.vue';
+import GlobalIncrementButton from './components/GlobalIncrementButton.vue';
+import GlobalDecrementButton from './components/GlobalDecrementButton.vue';
 
 export default Vue.extend({
   name: 'App',
@@ -32,6 +41,9 @@ export default Vue.extend({
     InjectedCounterDisplay,
     InjectedIncrementButton,
     InjectedDecrementButton,
+    GlobalCounterDisplay,
+    GlobalIncrementButton,
+    GlobalDecrementButton,
   },
 });
 </script>
