@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <h1>TypeScript + ストアパターン</h1>
+    <h2>Data で状態管理</h2>
+    <SimpleCounter />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import SimpleCounter from './components/SimpleCounter.vue';
 
 export default Vue.extend({
   name: 'App',
   components: {
-    HelloWorld,
+    SimpleCounter,
   },
 });
 </script>
@@ -25,5 +26,10 @@ export default Vue.extend({
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#app .count {
+  margin: 0 0.5em;
+  font-size: 2em;
 }
 </style>
