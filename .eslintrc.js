@@ -3,6 +3,13 @@ module.exports = {
   env: {
     node: true,
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
+      },
+    },
+  },
   extends: [
     'plugin:vue/recommended',
     '@vue/airbnb',
