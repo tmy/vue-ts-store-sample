@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { computed } from 'vue-function-api';
+import { computed } from '@vue/composition-api';
 import counterStore from '@/stores/counter';
 
 export default {

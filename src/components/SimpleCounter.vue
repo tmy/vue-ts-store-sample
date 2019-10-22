@@ -13,18 +13,22 @@
 </template>
 
 <script lang="ts">
-import { value } from 'vue-function-api';
+import { reactive, computed } from '@vue/composition-api';
 
 export default {
   setup() {
-    const count = value(0);
+    const state = reactive({
+      count: 0,
+    });
+    const count = computed(() => state.count);
+
     return {
       count,
       increment() {
-        count.value += 1;
+        state.count += 1;
       },
       decrement() {
-        count.value -= 1;
+        state.count -= 1;
       },
     };
   },

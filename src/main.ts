@@ -1,9 +1,9 @@
 import Vue from 'vue';
-import { plugin } from 'vue-function-api';
+import VueCompositionApi from '@vue/composition-api';
 import App from './App.vue';
 import globalStore from './stores/global';
 
-Vue.use(plugin);
+Vue.use(VueCompositionApi);
 Vue.prototype.$store = globalStore();
 Vue.config.productionTip = false;
 

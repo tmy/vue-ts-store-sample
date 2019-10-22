@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { computed, SetupContext } from 'vue-function-api';
+import { computed, SetupContext } from '@vue/composition-api';
 
 export default {
   setup(props: {}, context: SetupContext) {

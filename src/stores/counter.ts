@@ -1,7 +1,7 @@
-import Vue from 'vue';
+import { reactive } from '@vue/composition-api';
 
 export default function counterStore() {
-  const state = Vue.observable({
+  const state = reactive({
     count: 0,
   });
 
