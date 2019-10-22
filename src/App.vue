@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>TypeScript + ストアパターン</h1>
-    <h2>Data で状態管理</h2>
+    <h2>コンポーネント内で状態管理</h2>
     <SimpleCounter />
     <h2>ストアで状態管理</h2>
     <StoredCounter />
