@@ -5,14 +5,14 @@
 </template>
 
 <script lang="ts">
-import { provide } from '@vue/composition-api';
-import counterStore from '../stores/counter';
+import { provide, defineComponent } from 'vue';
+import counterStore from '@/stores/counter';
 import CounterKey from './counter-key';
 
-export default {
+export default defineComponent({
   setup() {
     provide(CounterKey, counterStore());
     return {};
   },
-};
+});
 </script>

@@ -5,11 +5,11 @@
 </template>
 
 <script lang="ts">
-import { computed, inject } from '@vue/composition-api';
+import { computed, defineComponent } from 'vue';
 import CounterKey from './counter-key';
 import injectOrError from './inject-or-error';
 
-export default {
+export default defineComponent({
   setup() {
     const counter = injectOrError(CounterKey);
     const count = computed(() => counter.count);
@@ -18,5 +18,5 @@ export default {
       count,
     };
   },
-};
+});
 </script>

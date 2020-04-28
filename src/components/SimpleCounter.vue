@@ -13,9 +13,9 @@
 </template>
 
 <script lang="ts">
-import { reactive, computed } from '@vue/composition-api';
+import { reactive, computed, defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   setup() {
     const state = reactive({
       count: 0,
@@ -32,5 +32,5 @@ export default {
       },
     };
   },
-};
+});
 </script>

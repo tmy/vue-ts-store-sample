@@ -1,4 +1,4 @@
-import { inject, InjectionKey } from '@vue/composition-api';
+import { inject, InjectionKey } from 'vue';
 
 export default function injectOrError<T>(key: InjectionKey<T>): T {
   const injected = inject(key);

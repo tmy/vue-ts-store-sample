@@ -5,16 +5,17 @@
 </template>
 
 <script lang="ts">
-import { computed, SetupContext } from '@vue/composition-api';
+import { computed, defineComponent } from 'vue';
+import { useGlobalStore } from '@/stores/global';
 
-export default {
-  setup(props: {}, context: SetupContext) {
-    const { counter } = context.root.$store;
+export default defineComponent({
+  setup() {
+    const { counter } = useGlobalStore();
     const count = computed(() => counter.count);
 
     return {
       count,
     };
   },
-};
+});
 </script>

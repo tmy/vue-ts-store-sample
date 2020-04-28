@@ -5,15 +5,16 @@
 </template>
 
 <script lang="ts">
-import { SetupContext } from '@vue/composition-api';
+import { defineComponent } from 'vue';
+import { useGlobalStore } from '@/stores/global';
 
-export default {
-  setup(props: {}, context: SetupContext) {
-    const { counter } = context.root.$store;
+export default defineComponent({
+  setup() {
+    const { counter } = useGlobalStore();
 
     return {
       decrement: counter.decrement,
     };
   },
-};
+});
 </script>

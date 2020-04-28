@@ -1,8 +1,9 @@
-import Vue, { createApp } from 'vue';
-import VueCompositionApi from '@vue/composition-api';
+import { createApp } from 'vue';
 import App from './App.vue';
-import globalStore from './stores/global';
+import globalStore, { GlobalStoreKey } from './stores/global';
 
-Vue.prototype.$store = globalStore();
+const app = createApp(App);
 
-createApp(App).mount('#app');
+app.provide(GlobalStoreKey, globalStore());
+
+app.mount('#app');

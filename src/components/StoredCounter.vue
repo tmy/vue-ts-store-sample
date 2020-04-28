@@ -13,10 +13,10 @@
 </template>
 
 <script lang="ts">
-import { computed } from '@vue/composition-api';
+import { computed, defineComponent } from 'vue';
 import counterStore from '@/stores/counter';
 
-export default {
+export default defineComponent({
   setup() {
     const counter = counterStore();
     const count = computed(() => counter.count);
@@ -27,5 +27,5 @@ export default {
       decrement: counter.decrement,
     };
   },
-};
+});
 </script>

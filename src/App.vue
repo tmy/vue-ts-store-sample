@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent } from 'vue';
 import SimpleCounter from './components/SimpleCounter.vue';
 import StoredCounter from './components/StoredCounter.vue';
 import CounterProvider from './components/CounterProvider.vue';
@@ -32,7 +32,7 @@ import GlobalCounterDisplay from './components/GlobalCounterDisplay.vue';
 import GlobalIncrementButton from './components/GlobalIncrementButton.vue';
 import GlobalDecrementButton from './components/GlobalDecrementButton.vue';
 
-export default Vue.extend({
+export default defineComponent({
   name: 'App',
   components: {
     SimpleCounter,
