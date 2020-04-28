@@ -1,9 +1,3 @@
-<template>
-  <span class="count">
-    {{ count }}
-  </span>
-</template>
-
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
 import { useGlobalStore } from '@/stores/global';
@@ -19,3 +13,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<template>
+  <span class="count">
+    {{ count }}
+  </span>
+</template>

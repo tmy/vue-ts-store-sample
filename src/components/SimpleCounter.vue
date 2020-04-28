@@ -1,17 +1,3 @@
-<template>
-  <div>
-    <button @click="decrement">
-      -
-    </button>
-    <span class="count">
-      {{ count }}
-    </span>
-    <button @click="increment">
-      +
-    </button>
-  </div>
-</template>
-
 <script lang="ts">
 import { reactive, computed, defineComponent } from 'vue';
 
@@ -34,3 +20,17 @@ export default defineComponent({
   },
 });
 </script>
+
+<template>
+  <div>
+    <button @click="decrement">
+      -
+    </button>
+    <span class="count">
+      {{ count }}
+    </span>
+    <button @click="increment">
+      +
+    </button>
+  </div>
+</template>

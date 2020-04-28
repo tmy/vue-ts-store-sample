@@ -1,9 +1,3 @@
-<template>
-  <button @click="increment">
-    +
-  </button>
-</template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
 import CounterKey from './counter-key';
@@ -19,3 +13,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<template>
+  <button @click="increment">
+    +
+  </button>
+</template>

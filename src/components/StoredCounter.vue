@@ -1,17 +1,3 @@
-<template>
-  <div>
-    <button @click="decrement">
-      -
-    </button>
-    <span class="count">
-      {{ count }}
-    </span>
-    <button @click="increment">
-      +
-    </button>
-  </div>
-</template>
-
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
 import counterStore from '@/stores/counter';
@@ -29,3 +15,17 @@ export default defineComponent({
   },
 });
 </script>
+
+<template>
+  <div>
+    <button @click="decrement">
+      -
+    </button>
+    <span class="count">
+      {{ count }}
+    </span>
+    <button @click="increment">
+      +
+    </button>
+  </div>
+</template>

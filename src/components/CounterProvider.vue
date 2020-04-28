@@ -1,9 +1,3 @@
-<template>
-  <div>
-    <slot />
-  </div>
-</template>
-
 <script lang="ts">
 import { provide, defineComponent } from 'vue';
 import counterStore from '@/stores/counter';
@@ -16,3 +10,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<template>
+  <div>
+    <slot />
+  </div>
+</template>

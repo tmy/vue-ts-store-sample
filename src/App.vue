@@ -1,25 +1,3 @@
-<template>
-  <div id="app">
-    <h1>TypeScript + ストアパターン</h1>
-    <h2>コンポーネント内で状態管理</h2>
-    <SimpleCounter />
-    <h2>ストアで状態管理</h2>
-    <StoredCounter />
-    <h2>Dependency Injection でストアを共有</h2>
-    <CounterProvider>
-      <InjectedDecrementButton />
-      <InjectedCounterDisplay />
-      <InjectedIncrementButton />
-    </CounterProvider>
-    <h2>ストアをグローバルで共有</h2>
-    <div>
-      <GlobalDecrementButton />
-      <GlobalCounterDisplay />
-      <GlobalIncrementButton />
-    </div>
-  </div>
-</template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
 import SimpleCounter from './components/SimpleCounter.vue';
@@ -47,6 +25,28 @@ export default defineComponent({
   },
 });
 </script>
+
+<template>
+  <div id="app">
+    <h1>TypeScript + ストアパターン</h1>
+    <h2>コンポーネント内で状態管理</h2>
+    <SimpleCounter />
+    <h2>ストアで状態管理</h2>
+    <StoredCounter />
+    <h2>Dependency Injection でストアを共有</h2>
+    <CounterProvider>
+      <InjectedDecrementButton />
+      <InjectedCounterDisplay />
+      <InjectedIncrementButton />
+    </CounterProvider>
+    <h2>ストアをグローバルで共有</h2>
+    <div>
+      <GlobalDecrementButton />
+      <GlobalCounterDisplay />
+      <GlobalIncrementButton />
+    </div>
+  </div>
+</template>
 
 <style>
 #app {

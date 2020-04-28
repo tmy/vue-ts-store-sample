@@ -1,9 +1,3 @@
-<template>
-  <span class="count">
-    {{ count }}
-  </span>
-</template>
-
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
 import CounterKey from './counter-key';
@@ -20,3 +14,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<template>
+  <span class="count">
+    {{ count }}
+  </span>
+</template>
