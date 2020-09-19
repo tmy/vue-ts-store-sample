@@ -3,23 +3,16 @@ module.exports = {
   env: {
     node: true,
   },
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
-      },
-    },
-  },
   extends: [
     'plugin:vue/recommended',
     '@vue/airbnb',
-    '@vue/typescript',
+    '@vue/typescript/recommended',
   ],
-  rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-  },
   parserOptions: {
-    parser: '@typescript-eslint/parser',
+    ecmaVersion: 2020,
+  },
+  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
   },
 };
